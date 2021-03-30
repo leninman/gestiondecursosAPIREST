@@ -15,7 +15,5 @@ import org.springframework.data.jpa.repository.Query;
  */
 public interface IInstructorDao extends JpaRepository<Instructor,Long> {
     
-     @Query(value = "Select * from instructores where  cedula = ?1", nativeQuery = true)
-    Instructor consultarInstructorPorCedula(String cedulaInstructor);
-    
+       
 }

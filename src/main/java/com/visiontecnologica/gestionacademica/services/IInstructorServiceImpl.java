@@ -32,11 +32,5 @@ public class IInstructorServiceImpl implements IInstructorService {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
          return instructorDao.findById(idInstructor).orElse(null);
     }
-
-    @Override
-    public Instructor consultarInstructorPorCedula(String cedulainstructor) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return this.instructorDao.consultarInstructorPorCedula(cedulainstructor);
-    }
-    
+  
 }

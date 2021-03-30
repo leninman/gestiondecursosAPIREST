@@ -18,6 +18,6 @@ public interface IInstructorService {
     
     public Instructor consultarInstructor(Long idInstructor);
     
-    public Instructor consultarInstructorPorCedula(String cedulainstructor);
+    
     
 }

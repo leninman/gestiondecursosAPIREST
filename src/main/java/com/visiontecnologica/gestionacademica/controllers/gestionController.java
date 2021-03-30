@@ -76,26 +76,17 @@ public class gestionController {
     }
 
     @GetMapping(path = "/consultarinstructores", produces = "application/json")
-    public @ResponseBody List<Instructor> consultarinstructores() {
-        
+    public @ResponseBody
+    List<Instructor> consultarinstructores() {
+
         return this.instructorservice.listaInstructores();
-        
+
     }
-    
-    @GetMapping(path = "/consultarinstructor/{cedula}", produces = "application/json")
-    public @ResponseBody Instructor consultarinstructores(@PathVariable String cedula) {
-        
-        Instructor instructor=new Instructor();
-        instructor=this.instructorservice.consultarInstructorPorCedula(cedula);
-        return instructor;
-        
-    }
-    
+
     @DeleteMapping("/eliminarcurso/{id}")
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void delete(@PathVariable Long id) {
-		this.cursoservice.eliminarCurso(id);
-	}
-    
-    
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        this.cursoservice.eliminarCurso(id);
     }
+
+}
